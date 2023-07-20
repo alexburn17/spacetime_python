@@ -1,0 +1,9 @@
+pandas
+numpy
+gdal
+xarray
+psutil
+plotly_express
+netCDF4
+matplotlib
+itertools
