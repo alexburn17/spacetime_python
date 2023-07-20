@@ -1,7 +1,7 @@
 import netCDF4 as nc
 import numpy as np
-from spacetimeraster.objects.cubeObject import cube
-from spacetimeraster.operations.time import cube_time, return_time
+from spacetimepy.objects.cubeObject import cube
+from spacetimepy.operations.time import cube_time, return_time
 import os
 
 def load_cube(file):

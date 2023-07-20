@@ -1,25 +1,25 @@
 
 
-![spacetimeraster logo](/Users/pburnham/Desktop/barracudaDocumentation/barraLogo.jpg)
+![spacetimepy logo](/Users/pburnham/Desktop/barracudaDocumentation/barraLogo.jpg)
 
 
 -----------------
 
-# spacetimeraster: A user-friendly tool for working with spatiotemporal data.
+# spacetimepy: A user-friendly tool for working with spatiotemporal data.
 
-## About spacetimeraster
+## About spacetimepy
 
-The main objective of the spacetimeraster python library is to make tasks like loading, rescaling, merging, and conducting mathmatical operations on spatiotemporal (or other D-dimensional data sets) easier for the user by providing a set of concise yet powerful functions. spacetimeraster opperations utilize a cube-like structure for all data sets that makes storing and manipulating large D-dimensional datasets more efficient. For scientists working with spatiotemporal data (such as climate or weather data sets) spacetimeraster is an ideal platform that allows the user to focus on the science rather than the coding.
+The main objective of the spacetimepy python library is to make tasks like loading, rescaling, merging, and conducting mathmatical operations on spatiotemporal (or other D-dimensional data sets) easier for the user by providing a set of concise yet powerful functions. spacetimepy opperations utilize a cube-like structure for all data sets that makes storing and manipulating large D-dimensional datasets more efficient. For scientists working with spatiotemporal data (such as climate or weather data sets) spacetimepy is an ideal platform that allows the user to focus on the science rather than the coding.
 
 ## Main Functionality
-spacetimeraster is in the beta stage (version number = 0.0.1) and additional functionality will be added on a regular basis. The current functionality of spacetimeraster is below:
+spacetimepy is in the beta stage (version number = 0.0.1) and additional functionality will be added on a regular basis. The current functionality of spacetimepy is below:
 
 - raster_align: aligns a set of raster file to a common grid size and EPSG code.
 - raster_trim: Trims a set of raster files to the largest common bounding box.
 - get_coords: Returns an array of the coordinates (latidute and longitude) for any raster file type.
-- cuberator: Writes a spacetimeraster dataset to a specified file type.
+- cuberator: Writes a spacetimepy dataset to a specified file type.
 - cube_smasher: Takes a set of raster files or D-dimensional arrays, scales them to a common scale and conducts a user defined mathmatical operation or  function call.
-- visulize: takes a spacetimeraster data set and plots a series of basic figures.
+- visulize: takes a spacetimepy data set and plots a series of basic figures.
 
 ## A Simple Example
 
@@ -54,24 +54,24 @@ The function returns the new cube data set as a numpy array as well as the latit
 
 ## Documentation
 
-The full documentation for this library may be found at https://biobarricuda.com/software/spacetimeraster-documentation
+The full documentation for this library may be found at https://biobarricuda.com/software/spacetimepy-documentation
 
 
 ## Dependancies
 
-- spacetimeraster relies on the Python bindings of GDAL for most of its geographic rescalling functionality.
-- spacetimeraster ustilizes the netCDF4 library for storing and passing data sets between functions.
+- spacetimepy relies on the Python bindings of GDAL for most of its geographic rescalling functionality.
+- spacetimepy ustilizes the netCDF4 library for storing and passing data sets between functions.
 
 
 ## Installation
 
-The source code may be found on Github at (my github repo for spacetimeraster)
+The source code may be found on Github at (my github repo for spacetimepy)
 
-The latest version of spacetimeraster may be installed from the [Python
+The latest version of spacetimepy may be installed from the [Python
 Package Index (PyPI)](https://pypi.org/project/pandas).
 
 ```sh
-pip install spacetimeraster
+pip install spacetimepy
 ```
 
 

@@ -1,18 +1,18 @@
 from setuptools import setup, find_packages
 
 packages = \
-['spacetimeraster',
- "spacetimeraster.input",
- "spacetimeraster.graphics",
- "spacetimeraster.objects",
- "spacetimeraster.operations",
- "spacetimeraster.output",
- "spacetimeraster.scale",
+['spacetimepy',
+ "spacetimepy.input",
+ "spacetimepy.graphics",
+ "spacetimepy.objects",
+ "spacetimepy.operations",
+ "spacetimepy.output",
+ "spacetimepy.scale",
  ]
 
 
 setup(
-    name='spacetimeraster',
+    name='spacetimepy',
     version='0.1.2',
     license='GNU GPLv3',
     author='P. A. Burnham et al.',

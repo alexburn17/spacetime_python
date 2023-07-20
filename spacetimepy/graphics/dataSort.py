@@ -5,7 +5,7 @@ import numpy as np
 
 from typing import Tuple, List
 
-from spacetimeraster.operations.cubeToDataframe import cube_to_dataframe
+from spacetimepy.operations.cubeToDataframe import cube_to_dataframe
 
 
 # Main Method

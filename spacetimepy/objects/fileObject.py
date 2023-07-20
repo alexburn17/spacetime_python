@@ -30,24 +30,24 @@ class file_object(object):
             objMat[3][i] = np.arange(min, max, 1)
 
 
-        # save as spacetimeraster object
-        self.spacetimerasterObject = objMat
+        # save as spacetimepy object
+        self.spacetimepyObject = objMat
 
         self.fileSize = sizes
 
     # returns a list of gdal or netcdf4 objects
     def get_GDAL_data(self):
 
-        return self.spacetimerasterObject[0]
+        return self.spacetimepyObject[0]
 
 
     # returns a list of SRS codes for each raster
     def get_epsg_code(self):
 
         epsgList = []
-        for i in range(len(self.spacetimerasterObject[0])):
+        for i in range(len(self.spacetimepyObject[0])):
 
-            code = self.spacetimerasterObject[1][i].GetAttrValue('AUTHORITY',1)
+            code = self.spacetimepyObject[1][i].GetAttrValue('AUTHORITY',1)
             epsgList.append("EPSG:" + str(code))
 
         return epsgList
@@ -57,8 +57,8 @@ class file_object(object):
     def get_units(self):
 
         unitList = []
-        for i in range(len(self.spacetimerasterObject[0])):
-            unit = self.spacetimerasterObject[1][i].GetAttrValue('UNIT',0)
+        for i in range(len(self.spacetimepyObject[0])):
+            unit = self.spacetimepyObject[1][i].GetAttrValue('UNIT',0)
 
             unitList.append(unit)
 
@@ -69,9 +69,9 @@ class file_object(object):
     def get_UL_corner(self):
 
         cornerList = []
-        for i in range(len(self.spacetimerasterObject[0])):
+        for i in range(len(self.spacetimepyObject[0])):
 
-            v = self.spacetimerasterObject[2][i]
+            v = self.spacetimepyObject[2][i]
             corner = [v[i] for i in [3,0]]
 
             cornerList.append(corner)
@@ -84,9 +84,9 @@ class file_object(object):
     def get_pixel_size(self):
 
         sizeList = []
-        for i in range(len(self.spacetimerasterObject[0])):
+        for i in range(len(self.spacetimepyObject[0])):
 
-            v = self.spacetimerasterObject[2][i]
+            v = self.spacetimepyObject[2][i]
             size = v[1]
 
             sizeList.append(size)
@@ -97,9 +97,9 @@ class file_object(object):
     def get_band_number(self):
 
         bandList = []
-        for i in range(len(self.spacetimerasterObject[0])):
+        for i in range(len(self.spacetimepyObject[0])):
 
-            bands = self.spacetimerasterObject[0][i].RasterCount
+            bands = self.spacetimepyObject[0][i].RasterCount
 
             bandList.append(bands)
 
@@ -108,15 +108,15 @@ class file_object(object):
 
     def get_time(self):
 
-        return self.spacetimerasterObject[3]
+        return self.spacetimepyObject[3]
 
     def get_dims(self):
 
         dimList = []
-        for i in range(len(self.spacetimerasterObject[0])):
+        for i in range(len(self.spacetimepyObject[0])):
 
-            xDim = self.spacetimerasterObject[0][i].RasterXSize
-            yDim = self.spacetimerasterObject[0][i].RasterYSize
+            xDim = self.spacetimepyObject[0][i].RasterXSize
+            yDim = self.spacetimepyObject[0][i].RasterYSize
 
             tempTup = tuple([xDim, yDim])
             dimList.append(tempTup)
@@ -127,9 +127,9 @@ class file_object(object):
     def get_data_range(self):
 
         rangeList = []
-        for i in range(len(self.spacetimerasterObject[0])):
+        for i in range(len(self.spacetimepyObject[0])):
 
-            band = (self.spacetimerasterObject[0][i].GetRasterBand(1))
+            band = (self.spacetimepyObject[0][i].GetRasterBand(1))
             max = band.GetMaximum()
             min = band.GetMinimum()
 
@@ -142,9 +142,9 @@ class file_object(object):
 
         nodatList = []
 
-        for i in range(len(self.spacetimerasterObject[0])):
+        for i in range(len(self.spacetimepyObject[0])):
 
-            band = (self.spacetimerasterObject[0][i].GetRasterBand(1))
+            band = (self.spacetimepyObject[0][i].GetRasterBand(1))
             nodat = band.GetNoDataValue()
 
             nodatList.append(nodat)
@@ -162,7 +162,7 @@ class file_object(object):
 
         for i in range(len(rasters)):
             tempMat = []
-            obj = self.spacetimerasterObject[0][rasters[i]]
+            obj = self.spacetimepyObject[0][rasters[i]]
 
             for j in range(max-min+1):
 
@@ -180,7 +180,7 @@ class file_object(object):
 
         outList = []
 
-        for i in range(len(self.spacetimerasterObject[0])):
+        for i in range(len(self.spacetimepyObject[0])):
 
             # pixel size
             ysize = -self.get_pixel_size()[i]
@@ -206,7 +206,7 @@ class file_object(object):
 
         outList = []
 
-        for i in range(len(self.spacetimerasterObject[0])):
+        for i in range(len(self.spacetimepyObject[0])):
 
             # pixel size
             xsize = self.get_pixel_size()[i]
@@ -243,10 +243,10 @@ class file_object(object):
 
         outList = []
 
-        for i in range(len(self.spacetimerasterObject[0])):
+        for i in range(len(self.spacetimepyObject[0])):
 
             tempMat = []
-            obj = self.spacetimerasterObject[0][i]
+            obj = self.spacetimepyObject[0][i]
 
             for j in range(self.get_band_number()[i]):
 

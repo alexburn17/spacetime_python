@@ -1,6 +1,6 @@
 import numpy as np
 import netCDF4 as nc
-from spacetimeraster.objects.interumCube import interum_cube
+from spacetimepy.objects.interumCube import interum_cube
 import xarray as xr
 
 def cube_smasher(function = None, eq = None, parentCube = None, **kwarg):

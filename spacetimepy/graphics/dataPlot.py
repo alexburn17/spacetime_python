@@ -12,7 +12,7 @@ import statsmodels.api as sm
 import datetime
 import math
 
-from spacetimeraster.graphics.dataSort import sort_dataframe, organize_dataframe
+from spacetimepy.graphics.dataSort import sort_dataframe, organize_dataframe
 
 # Style color presets
 COLOR_STYLES = {

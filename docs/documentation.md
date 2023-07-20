@@ -1,15 +1,15 @@
 
-![spacetimeraster logo](/Users/pburnham/Desktop/barracudaDocumentation/barraLogo.jpg)
+![spacetimepy logo](/Users/pburnham/Desktop/barracudaDocumentation/barraLogo.jpg)
 
 
 -----------------
 
-# spacetimeraster Documentation
+# spacetimepy Documentation
 
-The main objective of the spacetimeraster python is to make tasks like loading, rescaling, merging, and conducting mathmatical operations on spatiotemporal (or other D-dimensional data sets) easier for the user by providing a set of concise yet powerful functions. spacetimeraster opperations utilize a cube-like structure for all data sets that makes storing and manipulating large D-dimensional datasets more efficient. For scientists working with spatiotemporal data (such as climate or weather data sets) spacetimeraster is an ideal platform that allows the user to focus on the science rather than the coding. spacetimeraster is in the beta stage (version number = 0.0.1) and additional functionality will be added on a regular basis. The current functionality of spacetimeraster is below:
+The main objective of the spacetimepy python is to make tasks like loading, rescaling, merging, and conducting mathmatical operations on spatiotemporal (or other D-dimensional data sets) easier for the user by providing a set of concise yet powerful functions. spacetimepy opperations utilize a cube-like structure for all data sets that makes storing and manipulating large D-dimensional datasets more efficient. For scientists working with spatiotemporal data (such as climate or weather data sets) spacetimepy is an ideal platform that allows the user to focus on the science rather than the coding. spacetimepy is in the beta stage (version number = 0.0.1) and additional functionality will be added on a regular basis. The current functionality of spacetimepy is below:
 
 
-## spacetimeraster Objects:
+## spacetimepy Objects:
 
 
 ###`fileObj.methods():`
@@ -46,7 +46,7 @@ dataArray = ds.get_data_array()
 
 
 ###`cubeObj.methods():`
-**Description:**  Cube objects are the main operational unit in the spacetimeraster package. Cube objects are cleaned, aligned D-dimensioal cube-liek datasets that minamally contain a data cube, a time dimension, and latitude and longitude (y, x) dimensions. They are the output of the `make_cube()` function. Cube objects may be passed to functions like `cube_smasher()`, `cube_plotter()` etc. to be opperated on mathmatically or functionally and visulized.
+**Description:**  Cube objects are the main operational unit in the spacetimepy package. Cube objects are cleaned, aligned D-dimensioal cube-liek datasets that minamally contain a data cube, a time dimension, and latitude and longitude (y, x) dimensions. They are the output of the `make_cube()` function. Cube objects may be passed to functions like `cube_smasher()`, `cube_plotter()` etc. to be opperated on mathmatically or functionally and visulized.
 **General output of methods:** The associated value for the cube object as specified by the method.		
 
 * `get_GDAL_data()` - Extracts orignal data object			
@@ -75,12 +75,12 @@ lat = ds.get_lat()
 
 
 
-## spacetimeraster Functions:
-**Description:** spacetimeraster functions conduct scaling, plotting, writing and other tasks on spacetimeraster objects.
+## spacetimepy Functions:
+**Description:** spacetimepy functions conduct scaling, plotting, writing and other tasks on spacetimepy objects.
 
 
 ### `read_data(data=None)`
-* **Functionality:** Reads in one or multiple raster data files and prepares them for data extraction and/or use with other spacetimeraster functions.
+* **Functionality:** Reads in one or multiple raster data files and prepares them for data extraction and/or use with other spacetimepy functions.
 * **Input:** data = list object containing file names of rasters 
 * **Output:** file object
 * **Additional Arguments:** None
@@ -119,11 +119,11 @@ make_cube(data = fileObject, fileName = "test.nc4", organizeFiles = "filestovar"
 * **Output:** aligned and rescaled cube or file objects
 * **Additional Arguments:** 
 	* **resolution** = (numeric) intended grid size of the outputted data set in either degrees or meters depending on the spatial reference system in use.
-		* **Default value:** largest resolution in data set in input spacetimeraster object
-	* **SRS** = (int) intended 4-digit spatial reference system code that all data sets in the outputted spacetimeraster object will use.
+		* **Default value:** largest resolution in data set in input spacetimepy object
+	* **SRS** = (int) intended 4-digit spatial reference system code that all data sets in the outputted spacetimepy object will use.
 		* **Default value:** EPSG of first data set in input object
-	* **noneVal** = (numeric) no data value to be used by all datasets in the outputted spacetimeraster object.
-		* **Default value:** no data value of first data set in input spacetimeraster object
+	* **noneVal** = (numeric) no data value to be used by all datasets in the outputted spacetimepy object.
+		* **Default value:** no data value of first data set in input spacetimepy object
 * Example function call:
 
 ```python
@@ -160,7 +160,7 @@ yearObj = cube_time(start="2000", length=202, scale = "year")
 ### `scale_time(cube, scale, method)`
 * **Functionality:** Summarizes a cube by some method at a temporal scale of the user's choosing.
 * **Inputs:** 
-	* **cube** = a spacetimeraster cube object
+	* **cube** = a spacetimepy cube object
 	* **scale** = the temporal scale the cube is to be summarized upon ("day", "month", "year")
 	* **method** = the summary method options are: "mean", "max", "min", "median"
 * **Output:** a new cube object with rescaled time
@@ -173,7 +173,7 @@ scale_time(cube=ds, scale="month", method="max")
 ### `select_time(cube, range="entire", scale = None, element=None)`
 * **Functionality:** Select a range and or specific temporal element to extract form a data cube such as speficifc days, months or years.
 * **Inputs:** 
-	* **cube** = a spacetimeraster cube object
+	* **cube** = a spacetimepy cube object
 	* **range** = (pair of character strings as a list or tuple) the range to be selcted. Either a list of the first and last date to be extracted or the default "entire" argument, which extracts all time points.
 	* **scale** = the temporal scale of the elements to be extracted ("day", "month", "year")
 	* **element** = (int) a numeric year, month or day value
@@ -235,7 +235,7 @@ df = plot_cube(cube=x, variable="B", type="space", summary = "max", showPlot = T
 ``` 
 
 ### `load_cube(file)`
-* **Functionality:** Takes a .nc4 file as outputted by the spacetimeraster `make_cube()` function and loads it back in as a cube object.
+* **Functionality:** Takes a .nc4 file as outputted by the spacetimepy `make_cube()` function and loads it back in as a cube object.
 * **Input:** file = a .nc4 file generated by `make_cube()`
 * **Output:** A cube object
 * **Additional Arguments:** = None
@@ -254,7 +254,7 @@ ds = load_cube(file = newCube)
 ## Example Workflow:
 
 ```python
-import spacetimeraster as sp
+import spacetimepy as sp
 
 # input file names
 file1 = "file1.tif"
@@ -262,7 +262,7 @@ file2 = "file2.tif"
 
 data = [file1, file2]
 
-# read data from list of files and make a spacetimeraster file object
+# read data from list of files and make a spacetimepy file object
 ds = read_data(data)
 ##########################################################################
 
@@ -272,7 +272,7 @@ newObj = raster_align(data=ds)
 # trim the rasters to the same greatest common bounding box
 trimmed = raster_trim(newObj)
 
-# create spacetimeraster time object
+# create spacetimepy time object
 yearObj = cube_time(start="2000", length=101, scale = "day")
 
 # make the alinged file object into a cube with a time element (writes the new file to disk)

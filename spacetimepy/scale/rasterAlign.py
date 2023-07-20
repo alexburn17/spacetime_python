@@ -1,7 +1,7 @@
 from osgeo import gdal
-from spacetimeraster.objects.fileObject import file_object
+from spacetimepy.objects.fileObject import file_object
 import numpy as np
-from spacetimeraster.input.readData import read_data
+from spacetimepy.input.readData import read_data
 
 
 ######################################################################################################################

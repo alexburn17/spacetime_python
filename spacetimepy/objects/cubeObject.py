@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import netCDF4 as nc
 import re
-from spacetimeraster.operations.time import cube_time, return_time
+from spacetimepy.operations.time import cube_time, return_time
 import xarray as xr
 import psutil
 

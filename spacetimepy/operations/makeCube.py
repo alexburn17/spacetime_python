@@ -1,9 +1,9 @@
 import numpy as np
 import netCDF4 as nc
 from osgeo import gdal
-from spacetimeraster.objects.cubeMeta import cube_meta
-from spacetimeraster.objects.writeNETCDF import write_netcdf
-from spacetimeraster.objects.cubeObject import cube
+from spacetimepy.objects.cubeMeta import cube_meta
+from spacetimepy.objects.writeNETCDF import write_netcdf
+from spacetimepy.objects.cubeObject import cube
 from itertools import accumulate
 import string
 

@@ -1,5 +1,5 @@
 import pandas as pd
-from spacetimeraster.operations.cubeToDataframe import cube_to_dataframe
+from spacetimepy.operations.cubeToDataframe import cube_to_dataframe
 
 
 def write_csv(cube=None, file_name=None):

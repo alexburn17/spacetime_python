@@ -1,7 +1,7 @@
 import re
 import numpy as np
 from osgeo import gdal
-from spacetimeraster.objects.fileObject import file_object
+from spacetimepy.objects.fileObject import file_object
 
 
 ######################################################################################################################

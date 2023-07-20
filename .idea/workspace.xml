@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="17bf0b51-668c-47fe-88d6-946c1ff88e80" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/__main__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/graphics/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/graphics/dataPlot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/graphics/dataSort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/input/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/input/readData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/input/spacetimetest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/objects/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/objects/cubeMeta.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/objects/cubeObject.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/objects/fileObject.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/objects/interumCube.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/objects/writeNETCDF.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/operations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/operations/cubeSmasher.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/operations/cubeToDataframe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/operations/loadCube.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/operations/makeCube.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/operations/time.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/output/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/output/writeCSV.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/output/writeCube.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/output/writeFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/scale/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/scale/mergeData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/scale/rasterAlign.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacetimeraster/scale/rasterTrim.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2SqWb2wTtF10XELNsfINjM3B4A8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17bf0b51-668c-47fe-88d6-946c1ff88e80" name="Changes" comment="" />
+      <created>1689874660089</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689874660089</updated>
+    </task>
+    <servers />
+  </component>
+</project>

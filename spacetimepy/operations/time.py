@@ -1,7 +1,7 @@
 import pandas as pd
 import netCDF4 as nc
 import numpy as np
-from spacetimeraster.objects.interumCube import interum_cube
+from spacetimepy.objects.interumCube import interum_cube
 import xarray as xr
 
 
