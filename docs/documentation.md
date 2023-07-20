@@ -1,5 +1,5 @@
 
-![spacetimepy logo](/Users/pburnham/Desktop/barracudaDocumentation/barraLogo.jpg)
+![spacetimepy logo](barraLogo.jpg)
 
 
 -----------------
