@@ -1,6 +1,6 @@
 
 
-![spacetimepy logo](docs/barraLogo.jpg)
+![spacetimepy logo](https://raw.githubusercontent.com/alexburn17/spacetime_python/main/docs/barraLogo.jpg)
 
 
 -----------------
@@ -47,7 +47,7 @@ pip install spacetimepy
 
 ## Funding
 
-<img src="docs/barracuda_logo_final.png" width="200" align="left">
+<img src="https://raw.githubusercontent.com/alexburn17/spacetime_python/main/docs/barracuda_logo_final.png" width="200" align="left">
 
 Spacetime is a product of [Barracuda](https://biobarracuda.org/), a collaboration between the University of Vermont and the University of Maine. Barracuda’s mission is to harness diverse current and historic data and new mechanistic models across the continental United States to help us better predict and adapt to climate change impacts on biodiversity and rural communities. This project is open source and funded by a National Science Foundation EPSCoR grant.			
 

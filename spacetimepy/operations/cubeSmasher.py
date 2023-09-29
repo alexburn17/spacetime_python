@@ -2,8 +2,12 @@ import numpy as np
 import netCDF4 as nc
 from spacetimepy.objects.interumCube import interum_cube
 import xarray as xr
+from spacetimepy.operations.makeCube import make_cube
+from datetime import date
+from random import randint
 
-def cube_smasher(function = None, eq = None, parentCube = None, **kwarg):
+
+def cube_smasher(function = None, eq = None, parentCube = None, fileName = None, **kwarg):
 
     # is there a parent cube and what is the file structure?
     if parentCube != None:
@@ -58,7 +62,17 @@ def cube_smasher(function = None, eq = None, parentCube = None, **kwarg):
                 lat=(["lat"], lat),
                 time=time))
 
-        out = interum_cube(cube = parentCube, array = y, structure = filestovar)
+        int = interum_cube(cube = parentCube, array = y, structure = filestovar)
+
+        if fileName == None:
+            # file name
+            now = date.today()
+            num = str(randint(100, 999))
+            file = "cube_smasher_" + str(now) + "_" + num + ".nc4"
+        else:
+            file = fileName
+
+        out = make_cube(data = int, fileName = file)
 
     return out
 

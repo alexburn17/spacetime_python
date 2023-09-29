@@ -149,6 +149,8 @@ class cube(object):
             else:
                 outMat = outMat.load()
 
+
+
         return outMat
 
     def get_shapeval(self):

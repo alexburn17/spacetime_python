@@ -2,6 +2,7 @@ from osgeo import gdal
 from osgeo import osr
 import numpy as np
 import netCDF4 as nc
+import time
 
 
 class file_object(object):
@@ -168,7 +169,6 @@ class file_object(object):
 
                 band = obj.GetRasterBand(j+1).ReadAsArray()
                 tempMat.append(band)
-                #print(j)
 
             outMat = np.stack(tempMat, axis=2)
             outList.append(outMat)
@@ -250,17 +250,12 @@ class file_object(object):
 
             for j in range(self.get_band_number()[i]):
 
-                import time
-                start = time.time()
-
                 band = obj.GetRasterBand(j+1).ReadAsArray()
                 tempMat.append(band)
 
-                end = time.time()
-                #print(end - start)
-
             outMat = np.stack(tempMat, axis=2)
             outList.append(outMat)
+
 
         return outList
 

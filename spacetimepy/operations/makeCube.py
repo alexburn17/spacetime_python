@@ -6,6 +6,9 @@ from spacetimepy.objects.writeNETCDF import write_netcdf
 from spacetimepy.objects.cubeObject import cube
 from itertools import accumulate
 import string
+import time as t
+
+
 
 # todo: pass timeObj down to netcdf maker for if state
 def make_cube(data = None, fileName = None, organizeFiles="filestotime", organizeBands="bandstotime", varNames=None, timeObj=None, inMemory = "auto"):
@@ -13,13 +16,11 @@ def make_cube(data = None, fileName = None, organizeFiles="filestotime", organiz
     if "file_object" in str(type(data)):
 
 
-
-
         # merge gdal datasets to one interum gdal cube
         dataList = []
         tempMat = []
         numBands = []
-        time =  timeObj
+        time = timeObj
         sizes = data.get_file_size()
 
         # deal with no user defined time vector with both file structures
@@ -63,6 +64,7 @@ def make_cube(data = None, fileName = None, organizeFiles="filestotime", organiz
                 dataList.append(gdal.BuildVRT("", obj, bandList = [j+1]))
 
 
+
         # split meta data cube and data by number of bands
         metaDataSplit = split_list(input = dataList, index = numBands)
         dataSplit = split_list(input = tempMat, index = numBands)
@@ -71,6 +73,7 @@ def make_cube(data = None, fileName = None, organizeFiles="filestotime", organiz
 
         # if files are one variable to stack
         if organizeFiles == "filestotime" and organizeBands == "bandstotime":
+
 
             outMat = np.dstack(tempMat) # stack data arrays
             fullCube = gdal.BuildVRT("", dataList, separate=True) # make a virtual cube for vrt layers
