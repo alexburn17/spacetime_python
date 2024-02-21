@@ -59,4 +59,5 @@ Spacetime is a product of [Barracuda](https://biobarracuda.org/), a collaboratio
 - Brian McGill
 - Nicholas Gotelli
 - Matt Dube
+- Quin Dubois
 
