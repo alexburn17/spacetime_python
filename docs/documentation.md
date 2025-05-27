@@ -275,7 +275,7 @@ trimmed = raster_trim(newObj)
 # create spacetimepy time object
 yearObj = cube_time(start="2000", length=101, scale = "day")
 
-# make the alinged file object into a cube with a time element (writes the new file to disk)
+# make the aligned file object into a cube with a time element (writes the new file to disk)
 ds = make_cube(data = trimmed, fileName = "test.nc4", organizeFiles = "filestovar", timeObj = yearObj)
 
 # scale time does basic temporal summary (here we are doing monthly means)
