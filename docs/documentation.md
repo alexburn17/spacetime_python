@@ -49,7 +49,7 @@ dataArray = ds.get_data_array()
 **Description:**  Cube objects are the main operational unit in the spacetimepy package. Cube objects are cleaned, aligned D-dimensioal cube-liek datasets that minamally contain a data cube, a time dimension, and latitude and longitude (y, x) dimensions. They are the output of the `make_cube()` function. Cube objects may be passed to functions like `cube_smasher()`, `cube_plotter()` etc. to be operated on mathematically or functionally and visualized.
 **General output of methods:** The associated value for the cube object as specified by the method.		
 
-* `get_GDAL_data()` - Extracts orignal data object			
+* `get_GDAL_data()` - Extracts original data object			
 * `get_epsg_code()` - extracts spatial reference system EPSG code				
 * `get_units()`	- extracts units of spatial grid	
 * `get_UL_corner()`	- Extracts lat and long coords of the upper left corner	
