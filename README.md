@@ -28,7 +28,7 @@ Spacetime is in the beta stage and additional functionality will be added on a r
 The full documentation for this library may be found at [Spacetime Lab Notebook](https://alexburn17.github.io/Theme3_LabNotebook/)
 
 
-## Dependancies
+## Dependencies
 
 - spacetimepy relies on the Python bindings of GDAL for most of its geographic rescalling functionality.
 - spacetimepy ustilizes the netCDF4 library for storing and passing data sets between functions.
