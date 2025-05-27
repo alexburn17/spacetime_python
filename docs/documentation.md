@@ -97,7 +97,7 @@ ds = read_data(data=rasterList)
 * **Input:** data = file object or cube object
 * **Output:** cube object
 * **Additional Arguments:**
-	* **outFile** = (char) name of outfile with prefered supported extension. 
+	* **outFile** = (char) name of outfile with preferred supported extension. 
 	* **organizeFiles** = how files are organized in cube (chr).
 		* "filestotime" stacks all files along the time dimension
 		* "filestovar" creates a higher dimensional cube where each cube is a different variable and time are bands within each raster. 	* **organizeBands** = how bands are treated when assembling the cube (chr).
