@@ -6,7 +6,7 @@ import re
 
 ######################################################################################################################
 # DESCRIPTION: This function called raster_align takes a list of raster names, loads the rasters
-# into memory and ensures they have the same aligned structure with the correct SRS codes and consitant resolutions
+# into memory and ensures they have the same aligned structure with the correct SRS codes and consistent resolutions
 #
 # AUTHOR: P. Alexander Burnham
 # 5 August 2021
