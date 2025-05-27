@@ -285,7 +285,7 @@ x = scale_time(cube=ds, scale="month", method="mean")
 # here we extract aprils between '2000-02-29' and '2000-04-30'
 y = select_time(cube=x, range=['2000-02-29', '2000-04-30'], scale = "month", element=4)
 
-# cube smasher does mathmatical/function operations on a cube or cubes (times 5)
+# cube smasher does mathematical/function operations on a cube or cubes (times 5)
 answer = cube_smasher(eq = "a * c", a = y, c = 5, parentCube = y)
 
 # plot the cube and output the data set in dataframe format that made the plot
