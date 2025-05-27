@@ -171,7 +171,7 @@ scale_time(cube=ds, scale="month", method="max")
 ``` 
 
 ### `select_time(cube, range="entire", scale = None, element=None)`
-* **Functionality:** Select a range and or specific temporal element to extract form a data cube such as speficifc days, months or years.
+* **Functionality:** Select a range and or specific temporal element to extract form a data cube such as specific days, months or years.
 * **Inputs:** 
 	* **cube** = a spacetimepy cube object
 	* **range** = (pair of character strings as a list or tuple) the range to be selcted. Either a list of the first and last date to be extracted or the default "entire" argument, which extracts all time points.
