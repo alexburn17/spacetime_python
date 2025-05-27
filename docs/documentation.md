@@ -202,7 +202,7 @@ select_time(cube=cubeObj, range=['2000-02-29', '2000-04-30'], scale = "month", e
 outputCube = cube_smasher(eq = "a + b ** c", a=cube1, b=cube2, c = 5, parentCube = cube1)
 
 
-# conduct mathmatical operation on two cube objects
+# conduct mathematical operation on two cube objects
 outputCube = cube_smasher(eq = "a + b", a=obj1, b=obj2, parentCube = obj1)
 ``` 
 
