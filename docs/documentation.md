@@ -187,7 +187,7 @@ select_time(cube=cubeObj, range=['2000-02-29', '2000-04-30'], scale = "month", e
 
 
 ### `cube_smasher(function = None, eq = None, parentCube = None, **kwarg))`
-* **Functionality:** Takes cube objects, arrays or scalar values, and conducts mathmatical and functional opperations on them as specified.
+* **Functionality:** Takes cube objects, arrays or scalar values, and conducts mathematical and functional opperations on them as specified.
 * **Input:** data = cube objects, numpy arrays or scalar values.
 * **Output:** returns new cube object after opperations are completed
 * **Additional Arguments:**
