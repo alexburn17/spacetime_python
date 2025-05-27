@@ -18,7 +18,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='spacetimepy',
-    version='0.1.6',
+    version='0.1.7',
     license='GNU GPLv3',
     author='P. A. Burnham et al.',
     author_email='alexburn17@gmail.com',

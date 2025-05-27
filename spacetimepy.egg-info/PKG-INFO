@@ -1,13 +1,27 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: spacetimepy
-Version: 0.1.6
+Version: 0.1.7
 Summary: A toolkit for working with spatiotemporal data
 Author: P. A. Burnham et al.
 Author-email: alexburn17@gmail.com
 License: GNU GPLv3
-Platform: UNKNOWN
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: gdal
+Requires-Dist: xarray
+Requires-Dist: psutil
+Requires-Dist: plotly_express
+Requires-Dist: netCDF4
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
 
 
 
@@ -70,6 +84,5 @@ Spacetime is a product of [Barracuda](https://biobarracuda.org/), a collaboratio
 - Brian McGill
 - Nicholas Gotelli
 - Matt Dube
-
-
+- Quin Dubois
 
