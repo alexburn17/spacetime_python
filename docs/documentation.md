@@ -192,7 +192,7 @@ select_time(cube=cubeObj, range=['2000-02-29', '2000-04-30'], scale = "month", e
 * **Output:** returns new cube object after operations are completed
 * **Additional Arguments:**
 	* **function** = name of user specified function to pass to `cube_smasher()`
-	* **eq** = (string) mathmatical equation to perform on data
+	* **eq** = (string) mathematical equation to perform on data
 	* **parentCube** = (cube object) The starting cube that the output cube should use as a guide for reconstruction (defaults to first detected cube if multiple are passed)
 	* **kwarg** = additional params to pass for user specified function if not using `eq` 
 * Example function call:
