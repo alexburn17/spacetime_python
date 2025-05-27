@@ -198,7 +198,7 @@ select_time(cube=cubeObj, range=['2000-02-29', '2000-04-30'], scale = "month", e
 * Example function call:
 
 ```python
-# mathmatical operations on two tif files
+# mathematical operations on two tif files
 outputCube = cube_smasher(eq = "a + b ** c", a=cube1, b=cube2, c = 5, parentCube = cube1)
 
 
