@@ -46,10 +46,10 @@ dataArray = ds.get_data_array()
 
 
 ###`cubeObj.methods():`
-**Description:**  Cube objects are the main operational unit in the spacetimepy package. Cube objects are cleaned, aligned D-dimensioal cube-liek datasets that minamally contain a data cube, a time dimension, and latitude and longitude (y, x) dimensions. They are the output of the `make_cube()` function. Cube objects may be passed to functions like `cube_smasher()`, `cube_plotter()` etc. to be opperated on mathmatically or functionally and visulized.
+**Description:**  Cube objects are the main operational unit in the spacetimepy package. Cube objects are cleaned, aligned D-dimensioal cube-liek datasets that minamally contain a data cube, a time dimension, and latitude and longitude (y, x) dimensions. They are the output of the `make_cube()` function. Cube objects may be passed to functions like `cube_smasher()`, `cube_plotter()` etc. to be operated on mathematically or functionally and visualized.
 **General output of methods:** The associated value for the cube object as specified by the method.		
 
-* `get_GDAL_data()` - Extracts orignal data object			
+* `get_GDAL_data()` - Extracts original data object			
 * `get_epsg_code()` - extracts spatial reference system EPSG code				
 * `get_units()`	- extracts units of spatial grid	
 * `get_UL_corner()`	- Extracts lat and long coords of the upper left corner	
@@ -97,7 +97,7 @@ ds = read_data(data=rasterList)
 * **Input:** data = file object or cube object
 * **Output:** cube object
 * **Additional Arguments:**
-	* **outFile** = (char) name of outfile with prefered supported extension. 
+	* **outFile** = (char) name of outfile with preferred supported extension. 
 	* **organizeFiles** = how files are organized in cube (chr).
 		* "filestotime" stacks all files along the time dimension
 		* "filestovar" creates a higher dimensional cube where each cube is a different variable and time are bands within each raster. 	* **organizeBands** = how bands are treated when assembling the cube (chr).
@@ -171,10 +171,10 @@ scale_time(cube=ds, scale="month", method="max")
 ``` 
 
 ### `select_time(cube, range="entire", scale = None, element=None)`
-* **Functionality:** Select a range and or specific temporal element to extract form a data cube such as speficifc days, months or years.
+* **Functionality:** Select a range and or specific temporal element to extract form a data cube such as specific days, months or years.
 * **Inputs:** 
 	* **cube** = a spacetimepy cube object
-	* **range** = (pair of character strings as a list or tuple) the range to be selcted. Either a list of the first and last date to be extracted or the default "entire" argument, which extracts all time points.
+	* **range** = (pair of character strings as a list or tuple) the range to be selected. Either a list of the first and last date to be extracted or the default "entire" argument, which extracts all time points.
 	* **scale** = the temporal scale of the elements to be extracted ("day", "month", "year")
 	* **element** = (int) a numeric year, month or day value
 	* **Output:** a new subsetted cube object
@@ -187,22 +187,22 @@ select_time(cube=cubeObj, range=['2000-02-29', '2000-04-30'], scale = "month", e
 
 
 ### `cube_smasher(function = None, eq = None, parentCube = None, **kwarg))`
-* **Functionality:** Takes cube objects, arrays or scalar values, and conducts mathmatical and functional opperations on them as specified.
+* **Functionality:** Takes cube objects, arrays or scalar values, and conducts mathematical and functional operations on them as specified.
 * **Input:** data = cube objects, numpy arrays or scalar values.
-* **Output:** returns new cube object after opperations are completed
+* **Output:** returns new cube object after operations are completed
 * **Additional Arguments:**
 	* **function** = name of user specified function to pass to `cube_smasher()`
-	* **eq** = (string) mathmatical equation to perform on data
+	* **eq** = (string) mathematical equation to perform on data
 	* **parentCube** = (cube object) The starting cube that the output cube should use as a guide for reconstruction (defaults to first detected cube if multiple are passed)
 	* **kwarg** = additional params to pass for user specified function if not using `eq` 
 * Example function call:
 
 ```python
-# mathmatical operations on two tif files
+# mathematical operations on two tif files
 outputCube = cube_smasher(eq = "a + b ** c", a=cube1, b=cube2, c = 5, parentCube = cube1)
 
 
-# conduct mathmatical operation on two cube objects
+# conduct mathematical operation on two cube objects
 outputCube = cube_smasher(eq = "a + b", a=obj1, b=obj2, parentCube = obj1)
 ``` 
 
@@ -275,7 +275,7 @@ trimmed = raster_trim(newObj)
 # create spacetimepy time object
 yearObj = cube_time(start="2000", length=101, scale = "day")
 
-# make the alinged file object into a cube with a time element (writes the new file to disk)
+# make the aligned file object into a cube with a time element (writes the new file to disk)
 ds = make_cube(data = trimmed, fileName = "test.nc4", organizeFiles = "filestovar", timeObj = yearObj)
 
 # scale time does basic temporal summary (here we are doing monthly means)
@@ -285,7 +285,7 @@ x = scale_time(cube=ds, scale="month", method="mean")
 # here we extract aprils between '2000-02-29' and '2000-04-30'
 y = select_time(cube=x, range=['2000-02-29', '2000-04-30'], scale = "month", element=4)
 
-# cube smasher does mathmatical/function operations on a cube or cubes (times 5)
+# cube smasher does mathematical/function operations on a cube or cubes (times 5)
 answer = cube_smasher(eq = "a * c", a = y, c = 5, parentCube = y)
 
 # plot the cube and output the data set in dataframe format that made the plot

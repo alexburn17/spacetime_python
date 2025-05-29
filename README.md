@@ -9,7 +9,7 @@
 
 ## About spacetimepy
 
-Spacetimepy is the python version of the larger spacetime project. The main objective of spacetime is to make tasks like loading, rescaling, merging, and conducting mathmatical operations on spatiotemporal (or other D-dimensional data sets) easier for the user by providing a set of concise yet powerful functions. spacetime opperations utilize a cube-like structure for all data sets that makes storing and manipulating large D-dimensional datasets more efficient. For scientists working with spatiotemporal data (such as climate or weather data sets) spacetimepy is an ideal platform that allows the user to focus on the science rather than the coding.
+Spacetimepy is the python version of the larger spacetime project. The main objective of spacetime is to make tasks like loading, rescaling, merging, and conducting mathematical operations on spatiotemporal (or other D-dimensional data sets) easier for the user by providing a set of concise yet powerful functions. spacetime operations utilize a cube-like structure for all data sets that makes storing and manipulating large D-dimensional datasets more efficient. For scientists working with spatiotemporal data (such as climate or weather data sets) spacetimepy is an ideal platform that allows the user to focus on the science rather than the coding.
 
 
 ## Main Functionality
@@ -28,7 +28,7 @@ Spacetime is in the beta stage and additional functionality will be added on a r
 The full documentation for this library may be found at [Spacetime Lab Notebook](https://alexburn17.github.io/Theme3_LabNotebook/)
 
 
-## Dependancies
+## Dependencies
 
 - spacetimepy relies on the Python bindings of GDAL for most of its geographic rescalling functionality.
 - spacetimepy ustilizes the netCDF4 library for storing and passing data sets between functions.
